@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-input aria-placeholder="Email" [(ngModel)]="email"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input
+      aria-placeholder="Password"
+      type="password"
+      show-hide-input
+      [(ngModel)]="password"
+      required
+    ></ion-input>
+  </ion-item>
+
+  <ion-button (click)="login()" class="submitBtn">
+    Log In
+  </ion-button>
+</ion-content>

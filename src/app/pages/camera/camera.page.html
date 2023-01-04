@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Document</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="container">
+  <iframe
+    *ngIf="pdfLink"
+    [src]="pdfLink"
+    width="100%"
+    height="300px"
+    frameborder="0"
+    type="application/pdf"
+  ></iframe>
+  <ion-button (click)="openCamera()" class="submitBtn">
+    Camera
+  </ion-button>
+
+  <ion-button (click)="uploadPDF()" class="submitBtn">
+    Upload PDF
+  </ion-button>
+
+  <ion-button (click)="encodePdf()" class="submitBtn">
+    Encode PDF
+  </ion-button>
+
+  <ion-button (click)="openEncodePdf()" class="submitBtn">
+    Open Encoded PDF(Owner)
+  </ion-button>
+
+  <ion-button (click)="openErrorPdf()" class="submitBtn">
+    Open Encoded PDF(No Owner)
+  </ion-button>
+
+  <ion-button (click)="driverMedicalDownload()" class="submitBtn">
+    Download(Driver Medical)
+  </ion-button>
+
+  <ion-button (click)="driverTrainDownload()" class="submitBtn">
+    Download(Driver Train)
+  </ion-button>
+</ion-content>
